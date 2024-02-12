@@ -4,7 +4,7 @@ The Ainkino app is an Android application designed to showcase popular movies us
 
 ## Features
 
-![alt text](image.png)
+![alt text](image-1.png)
 - **Browse Popular Movies**: Users can view a list of popular movies fetched from the *** API.
 - **Movie Details**: By selecting a movie, users can view its detailed information, such as the names, poster image, year of release, genre, country, and a full description.
 - **Favorites**: Users can mark movies as favorites. These selections are highlighted in the UI.
