@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        >
 
         <ImageView
             android:id="@+id/moviePoster"
@@ -21,27 +21,35 @@
             android:id="@+id/movieTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
         <TextView
             android:id="@+id/movieDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="start"
             android:textSize="16sp"
+            android:padding="20dp"
             android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/movieGenre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingStart="20dp"
             android:textSize="16sp"
             android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/movieCountry"
+            android:gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:paddingStart="20dp"
             android:layout_marginBottom="8dp"/>
 
     </LinearLayout>

@@ -2,8 +2,10 @@ package com.example.ainkino
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableStringBuilder
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.text.bold
 import androidx.core.widget.ImageViewCompat
 import com.bumptech.glide.Glide
 import retrofit2.Call
@@ -37,8 +39,14 @@ class MovieDetailActivity : AppCompatActivity() {
                     val movieDetail = response.body()
                     movieTitleTextView.text = movieDetail?.nameRu
                     movieDescriptionTextView.text = movieDetail?.description
-                    movieGenreTextView.text = movieDetail?.genres.toString()
-                    movieCountryTextView.text = movieDetail?.countries.toString()
+                    val genres = SpannableStringBuilder()
+                        .bold { append("Жанры: ") }
+                        .append(movieDetail?.genres?.get(0)?.genre)
+                    val countries = SpannableStringBuilder()
+                        .bold { append("Страны: ") }
+                        .append(movieDetail?.countries?.get(0)?.country)
+                    movieGenreTextView.text = genres
+                    movieCountryTextView.text = countries
                     Glide.with(applicationContext).load(movieDetail?.posterUrl).into(moviePosterImageView)
                 }
             }

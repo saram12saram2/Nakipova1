@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-
     }
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
